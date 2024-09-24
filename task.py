@@ -1,14 +1,12 @@
 def task_1(numbers, N): # Numbers is a list of integer values, times is how many times to operatate (int)
-    #x = 0
+    x = 0
     for number in numbers:
-        for x in range(N):
-            if numbers[x] % 2 == 1:
+        for i in range(N):
+            if number % 2 == 1:
                 numbers[x] += 2
-                print (numbers[x])
-            elif numbers[x] % 2 == 0:
+            elif number % 2 == 0:
                 numbers[x] -= 2
-                print (numbers[x])
-        #x += 1
+        x += 1
     return numbers
 
 def task_2(N): # N is any integer value
@@ -64,7 +62,7 @@ def task_3(calc): # Calc is a string
         result = num1 * num2
     elif operator == "//":
         if num1 == 0 or num2 == 0:
-            result = "ERROR: You cannot divide by zero"
+            result = -1
         else:
             result = num1 // num2
     else:
